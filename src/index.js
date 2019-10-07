@@ -5,8 +5,8 @@ import { time, currentTime, tick, startTime } from "./timer";
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementsByTagName("canvas")[0];
 
-    canvas.width = 1000;
-    canvas.height = 700;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     const context = canvas.getContext("2d");
 
     

@@ -8,7 +8,7 @@ function Food(x, y) {
 
 Food.prototype.draw = function(context, xView, yView) {
     context.save();
-    context.fillStyle = "red";
+    context.fillStyle = "yellow";
 
     context.beginPath();
     context.arc(

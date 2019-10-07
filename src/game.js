@@ -67,8 +67,20 @@ function Game(canvas, context) {
 
   var draw = function () {
 
-     context.clearRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = randomccc;                          // canvas color;
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    
+    var grd = context.createLinearGradient(0, 0, context.canvas.width, 0);
+    grd.addColorStop(0, "#FA498D");
+    grd.addColorStop(1, "#F386B0");
+
+    // Fill with gradient
+    context.fillStyle = grd;
+    context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+
+
+    // context.fillStyle = randomccc;                          // canvas color;
+      // context.canvas.width = window.innerWidth;
+      // context.canvas.height = window.innerHeight;
 
     const timerText = document.getElementById("timer");
     if ((timerText.innerText === "you win!")) {
@@ -78,7 +90,7 @@ function Game(canvas, context) {
     }
 
 
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    // context.fillRect(0, 0, canvas.width, canvas.height);
 
       player.draw(context, camera.xView, camera.yView);
       
@@ -119,7 +131,8 @@ function Game(canvas, context) {
   
         const timerbutton = document.getElementById("start-button");
         timerbutton.addEventListener("click", () => {
-          timer.startTime()
+          timer.startTime();
+          timerbutton.id = 'display-nothing';
         });
         
   var gameLoop = function() {

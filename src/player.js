@@ -7,9 +7,10 @@ function randomColor() {
     color += hexDigits[Math.floor(Math.random() * 16)];
   }
 
+  color = "#67B967";
   return color;
 }  
-
+// rgb(103, 185, 103);
 function Player(x, y) {
 
     this.x = x;

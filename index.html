@@ -2,7 +2,9 @@
 
 <head>
     <title>Ogoria</title>
-    <link rel="stylesheet" href="../src/game.css">
+    <link rel="stylesheet" href="./src/game.css">
+
+    
     <!-- <script type="application/javascript" src="./main.js">
         window.Game = {};
     </script> -->
@@ -10,22 +12,27 @@
 
 <body>
     <!-- <canvas id="game-canvas"> -->
-        <div id='welcome-header'>Ogoria - Move with your direction keys and eat to win! </div>
-        <div id="timer">Click start timer below!</div>
-        <canvas><button id="myBtn">Open Modal</button>
+        <div id='welcome-title'>OGORIA</div>
+        <button id='start-button'>PLAY NOW</button>
+        <div id='welcome-header'>Move with your direction keys and eat enough food before time runs out!</div>
+        <div id="timer"></div>
+        <canvas>
+            PIZZA
+        </canvas>
+        <!-- <button id="myBtn">Open Modal</button> -->
         
         <!-- The Modal -->
         <div id="myModal" class="modal">
         
             <!-- Modal content -->
-            <div class="modal-content">
+            <!-- <div class="modal-content">
                 <span class="close">&times;</span>
                 <p>Some text in the Modal..</p>
-            </div>
+            </div> -->
         
         </div></canvas>
 
-    <button id='start-button'>Start Timer</button>
+    <!-- <button id='start-button'>PLAY NOW</button> -->
 
     <script type="application/javascript" src="./main.js">
         window.Game = {};
